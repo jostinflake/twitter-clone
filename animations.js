@@ -10,7 +10,14 @@ $(document).ready(function(){
   		$('#char-count').html(char);
 		if (len >= (max - 10))  {
 	    	$('#char-count').css('color', 'red');
-	  	} 
+	  	} else {
+	  		$('#char-count').css('color', 'black');
+	  	}
+	  	if (char < 0) {
+	  		$('#tweet-submit').prop('disabled', true);
+	  	} else {
+	  		$('#tweet-submit').prop('disabled', false);
+	  	}
  	 });
 		
 })
